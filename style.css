@@ -1,0 +1,298 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Ubuntu', Helvetica, sans-serif;
+	font-size: 14px;
+	scroll-behavior: smooth;
+}
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: flex;
+	/* WAS FLEX DIR COLUMN ONLY SO CHECK IT */
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+
+
+header {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
+.logo {
+	width: 350px;
+	height: 45px;
+	margin-left: 15px;
+}
+
+
+
+header nav {
+	width: 100%;
+	margin-right: 20px;
+}
+header ul {
+	display: flex;
+	justify-content: flex-end;
+}
+header li {
+	margin-right: 40px;
+	flex-shrink: 0;
+}
+header li:last-child {
+	margin-right: 0;
+}
+header a {
+	padding: 12px 35px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	transition: background-color 0.2s;
+}
+header a:hover {
+	background-color: black;
+	color: white;
+}
+
+
+
+
+
+.get-started {
+	margin-top: 150px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.get-started-item {
+	margin-bottom: 20px;
+}
+.get-started-item:last-child {
+	margin-bottom: 0;
+}
+
+
+
+
+.features {
+	min-width: 600px;
+	max-width: 850px;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 60px 40px;
+}
+td {
+	line-height: 1.5em;
+}
+.features h2 {
+	padding-bottom: 5px;
+}
+.black-image {
+	background-color: black;
+	width: 50px;
+	max-height: 60px;
+}
+
+
+
+
+.products {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+}
+.product {
+	width: 250px;
+	text-align: center;
+	border-radius: 5px;
+	margin-right: 20px;
+	border: 1px solid black;
+}
+.product:last-child {
+	margin-right: 0;
+}
+.product-name {
+	font-weight: 700;
+	padding: 15px 45px;
+	background-color: gainsboro;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.product > * {
+	margin-bottom: 20px;
+}
+.product li:not(:last-child) {
+	margin-bottom: 15px;
+}
+.product .btn {
+	font-weight: 300;
+}
+
+
+
+footer {
+	height: 100px;
+	width: 75%;
+	background-color: gainsboro;
+	margin-top: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+footer ul {
+	width: auto;
+	margin-right: 70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+footer li {
+	margin-right: 40px;
+}
+footer li:last-child {
+	margin-right: 0;
+}
+footer a {
+	padding: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+/* GLOBAL RULES */
+
+h2 {
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+.btn {
+	font-size: 0.9em;
+	font-weight: 400;
+	width: auto;
+	background-color: orange;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	transition: background-color 0.45s;
+	letter-spacing: 1.5px;
+}
+.btn:hover {
+	background-color: gold;
+	cursor: pointer;
+}
+.btn:active {
+	color: white;
+	opacity: 0.9;
+}
+
+/* JUST FOR JUMP SCROLLS */
+#features, #how-it-works, #pricing {
+	display: block;
+	margin-bottom: 75px;
+}
+
+#copyright {
+	color: grey;
+	font-size: 1em;
+	margin-left: 50px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+	header {
+		height: auto;
+		flex-direction: column;
+		align-items: center;
+	}
+	header nav {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	header ul {
+		justify-content: center;
+	}
+	header li {
+		margin-right: 60px;
+	}
+	header a {
+		width: auto;
+		padding: 7px 12px;
+	}
+	.logo {
+		margin: 10px 33px 20px 0;
+	}
+	#features, #how-it-works, #pricing {
+		margin-bottom: 115px;
+	}
+	.products {
+		flex-direction: column;
+	}
+	.product {
+		margin-right: 0;
+		margin-bottom: 35px;
+	}
+	.product:last-child {
+		margin-bottom: 0;
+	}
+	footer {
+		width: 80%;
+	}
+	footer ul {
+		margin-right: 40px;
+	}
+	footer li {
+		margin-right: 20px;
+	}
+	#features, #how-it-works, #pricing {
+		display: block;
+		margin-bottom: 70px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	header {
+		position: relative;
+		margin: 0 auto;
+	}
+	.get-started {
+		margin-top: 100px;
+	}
+	.black-image {
+		display: none;
+	}
+	table td {
+		text-align: center;
+	}
+	footer ul {
+		flex-direction: column;
+	}
+	footer li {
+		margin-right: 0px;
+		margin-bottom: 5px;
+	}
+}
